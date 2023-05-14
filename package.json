@@ -5,16 +5,18 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "prisma generate && next dev",
+    "dev": "prisma generate --data-proxy && next dev",
     "build": "prisma generate && prisma db push && prisma db seed && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:push": "npx dotenv -e .env.local -- prisma db push",
+    "db:seed": "npx dotenv -e .env.local -- prisma db seed"
   },
   "prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "dependencies": {
-    "@prisma/client": "4.13.0",
+    "@prisma/client": "4.14.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.37",
     "@types/react-dom": "18.0.11",
@@ -32,7 +34,8 @@
   },
   "devDependencies": {
     "@types/ms": "^0.7.31",
-    "prisma": "^4.13.0",
+    "dotenv-cli": "^7.2.1",
+    "prisma": "^4.14.0",
     "turbo": "^1.9.3"
   }
 }
