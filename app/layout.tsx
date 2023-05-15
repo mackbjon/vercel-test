@@ -1,8 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 
-// export const runtime = 'edge'
-export const preferredRegion = 'home'
+export const runtime = 'edge'
 export const dynamic = 'force-dynamic'
 
 export const metadata = {
