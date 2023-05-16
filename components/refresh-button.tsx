@@ -1,11 +1,22 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import { useTransition } from 'react'
+import { useEffect, useRef, useState, useTransition } from 'react'
 
 export default function RefreshButton() {
   const router = useRouter()
+  const startTime = useRef<any>(null)
   const [isPending, startTransition] = useTransition()
+
+  useEffect(() => {
+    if (isPending) {
+      startTime.current = Date.now()
+    } else {
+      if (startTime.current) {
+        console.log(`Time elapsed: ${startTime.current - Date.now()} ms`)
+      }
+    }
+  }, [isPending])
 
   return (
     <button
