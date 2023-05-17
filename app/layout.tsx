@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 
 // export const runtime = 'edge'
 // export const dynamic = 'force-static'
+export const revalidate = 60
 
 export const metadata = {
   title: 'pg-test',
