@@ -2,6 +2,7 @@ import { prisma } from '@/lib/prisma'
 import { timeAgo } from '@/lib/utils'
 import Image from 'next/image'
 import RefreshButton from './refresh-button'
+import { cache } from 'react'
 
 export default async function Table() {
   const startTime = Date.now()
