@@ -1,10 +1,9 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
+import { refreshUsers } from '../app/actions'
 import { useEffect, useRef, useState, useTransition } from 'react'
 
 export default function RefreshButton() {
-  const router = useRouter()
   const startTime = useRef<any>(null)
   const [isPending, startTransition] = useTransition()
 
@@ -26,7 +25,7 @@ export default function RefreshButton() {
       disabled={isPending}
       onClick={() => {
         startTransition(() => {
-          router.refresh()
+          refreshUsers()
         })
       }}
     >
