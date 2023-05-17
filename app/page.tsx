@@ -9,9 +9,6 @@ export const dynamic = 'force-static'
 // Prisma does not support Edge without the Data Proxy currently
 
 export default async function Home() {
-  await new Promise((resolve) => {
-    setTimeout(resolve, 5000)
-  })
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center">
       <Link
