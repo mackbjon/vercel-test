@@ -2,7 +2,6 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 
 export const runtime = 'edge'
-export const dynamic = 'force-dynamic'
 
 export const metadata = {
   title: 'pg-test',
