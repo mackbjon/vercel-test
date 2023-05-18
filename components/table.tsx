@@ -5,10 +5,7 @@ import { getUsers } from '../lib/getUsers'
 
 export default async function Table() {
   const startTime = Date.now()
-  const response = await fetch(`https://${process.env.VERCEL_URL}/api`, {
-    next: { tags: ['users'] },
-  })
-  const users = await response.json()
+  const users = await getUsers()
   const duration = Date.now() - startTime
 
   return (
@@ -23,7 +20,7 @@ export default async function Table() {
         <RefreshButton />
       </div>
       <div className="divide-y divide-gray-900/5">
-        {users.map((user: any) => (
+        {users.map((user) => (
           <div
             key={user.name}
             className="flex items-center justify-between py-3"

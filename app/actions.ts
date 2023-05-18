@@ -1,6 +1,6 @@
 'use server'
-import { revalidateTag } from 'next/cache'
+import { revalidatePath } from 'next/cache'
 
 export const refreshUsers = async () => {
-  revalidateTag('users')
+  revalidatePath('/')
 }
