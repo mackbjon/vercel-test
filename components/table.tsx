@@ -2,6 +2,7 @@ import { timeAgo } from '@/lib/utils'
 import Image from 'next/image'
 import RefreshButton from './refresh-button'
 import { prisma } from '../lib/prisma'
+import ServerRefreshButton from './server-refresh-button'
 
 export default async function Table() {
   const startTime = Date.now()
@@ -17,7 +18,7 @@ export default async function Table() {
             Fetched {users.length} users in {duration}ms
           </p>
         </div>
-        <RefreshButton />
+        <ServerRefreshButton />
       </div>
       <div className="divide-y divide-gray-900/5">
         {users.map((user) => (
