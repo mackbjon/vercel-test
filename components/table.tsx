@@ -5,7 +5,10 @@ import { getUsers } from '../lib/getUsers'
 
 export default async function Table() {
   const startTime = Date.now()
-  const users = await getUsers()
+  const response = await fetch('http://localhost:3000/api', {
+    next: { tags: ['users'] },
+  })
+  const users = await response.json()
   const duration = Date.now() - startTime
 
   return (
@@ -20,7 +23,7 @@ export default async function Table() {
         <RefreshButton />
       </div>
       <div className="divide-y divide-gray-900/5">
-        {users.map((user) => (
+        {users.map((user: any) => (
           <div
             key={user.name}
             className="flex items-center justify-between py-3"

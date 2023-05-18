@@ -5,7 +5,8 @@ import Table from '@/components/table'
 import TablePlaceholder from '@/components/table-placeholder'
 import ExpandingArrow from '@/components/expanding-arrow'
 
-export const runtime = 'edge'
+// export const runtime = 'edge'
+export const preferredRegion = 'iad1'
 
 // export const dynamic = 'force-static'
 // Prisma does not support Edge without the Data Proxy currently
@@ -21,7 +22,7 @@ export default async function Home() {
         <ExpandingArrow />
       </Link>
       <h1 className="pt-4 pb-8 bg-gradient-to-br from-black via-[#171717] to-[#575757] bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
-        Postgres on Vercel. Have To do this.
+        {`Postgres on Vercel.`}
       </h1>
       <Suspense fallback={<TablePlaceholder />}>
         {/* @ts-expect-error Async Server Component */}

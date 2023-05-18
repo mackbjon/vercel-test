@@ -1,8 +1,6 @@
 'use server'
-import { revalidatePath } from 'next/cache'
-import { getUsers } from '../lib/getUsers'
+import { revalidateTag } from 'next/cache'
 
 export const refreshUsers = async () => {
-  await getUsers()
-  revalidatePath('/')
+  revalidateTag('users')
 }
