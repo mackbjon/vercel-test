@@ -12,7 +12,7 @@ export default function ClientButton() {
       } text-sm text-gray-500 hover:text-gray-900`}
       type="submit"
     >
-      {'Refresh'}
+      {pending ? 'Refreshing...' : 'Refresh'}
     </button>
   )
 }
