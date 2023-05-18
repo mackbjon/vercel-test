@@ -5,7 +5,7 @@ import { getUsers } from '../lib/getUsers'
 
 export default async function Table() {
   const startTime = Date.now()
-  const response = await fetch('http://localhost:3000/api', {
+  const response = await fetch(`https://${process.env.VERCEL_URL}/api`, {
     next: { tags: ['users'] },
   })
   const users = await response.json()
