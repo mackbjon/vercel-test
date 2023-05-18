@@ -1,7 +1,6 @@
 import { timeAgo } from '@/lib/utils'
 import Image from 'next/image'
 import { getUsers } from '../lib/getUsers'
-import ServerRefreshButton from './exp-refresh-button'
 import RefreshButton from './refresh-button'
 
 export default async function Table() {

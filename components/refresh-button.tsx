@@ -1,7 +1,6 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import { refreshUsers } from '../app/actions'
 import { useEffect, useRef, useTransition } from 'react'
 
 export default function RefreshButton() {
