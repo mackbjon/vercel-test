@@ -1,6 +1,6 @@
-// export const runtime = 'edge'
+export const runtime = 'edge'
 // export const preferredRegion = 'iad1'
-export const dynamic = 'force-dynamic'
+// export const dynamic = 'force-dynamic'
 
 import { timeAgo } from '@/lib/utils'
 import Image from 'next/image'
