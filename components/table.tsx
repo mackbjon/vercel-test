@@ -9,6 +9,8 @@ export default async function Table() {
   // await new Promise((resolve) => {
   //   setTimeout(resolve, 5000)
   // })
+  await prisma.users.findMany()
+  await prisma.users.findMany()
   const duration = Date.now() - startTime
 
   return (
