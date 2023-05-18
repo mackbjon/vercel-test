@@ -1,3 +1,4 @@
+import ClientButton from './client-button'
 import { revalidatePath } from 'next/cache'
 
 export default function ServerRefreshButton() {
@@ -7,14 +8,9 @@ export default function ServerRefreshButton() {
   }
 
   return (
-    <form>
-      <button
-        /* @ts-expect-error */
-        formAction={refreshUsers}
-        className={`text-sm text-gray-500 hover:text-gray-900`}
-      >
-        {'Refresh'}
-      </button>
+    /* @ts-expect-error */
+    <form action={refreshUsers}>
+      <ClientButton />
     </form>
   )
 }

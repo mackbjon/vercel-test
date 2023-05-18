@@ -1,7 +1,7 @@
 import { timeAgo } from '@/lib/utils'
 import Image from 'next/image'
 import { prisma } from '../lib/prisma'
-import ServerRefreshButton from './server-refresh-button'
+import ServerRefreshButton from './exp-refresh-button'
 
 export default async function Table() {
   const startTime = Date.now()
