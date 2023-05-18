@@ -1,6 +1,9 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 
+export const preferredRegion = 'iad1'
+export const dynamic = 'force-dynamic'
+
 export const metadata = {
   title: 'pg-test',
   description:
