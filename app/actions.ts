@@ -2,5 +2,5 @@
 import { revalidatePath } from 'next/cache'
 
 export const refreshUsers = async () => {
-  revalidatePath('/')
+  revalidatePath('/table')
 }

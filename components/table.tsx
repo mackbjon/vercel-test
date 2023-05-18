@@ -1,6 +1,5 @@
 import { timeAgo } from '@/lib/utils'
 import Image from 'next/image'
-import RefreshButton from './refresh-button'
 import { prisma } from '../lib/prisma'
 import ServerRefreshButton from './server-refresh-button'
 
