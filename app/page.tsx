@@ -5,12 +5,9 @@ import Table from '@/components/table'
 import TablePlaceholder from '@/components/table-placeholder'
 import ExpandingArrow from '@/components/expanding-arrow'
 
-export const runtime = 'edge'
-
-// export const dynamic = 'force-static'
 // Prisma does not support Edge without the Data Proxy currently
 
-export default async function Home() {
+export default function Home() {
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center">
       <Link
