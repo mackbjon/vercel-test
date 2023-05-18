@@ -1,11 +1,11 @@
 import { timeAgo } from '@/lib/utils'
 import Image from 'next/image'
-import { prisma } from '../lib/prisma'
+import { getUsers } from '../lib/getUsers'
 import ServerRefreshButton from './exp-refresh-button'
 
 export default async function Table() {
   const startTime = Date.now()
-  const users = await prisma.users.findMany()
+  const users = await getUsers()
   const duration = Date.now() - startTime
 
   return (
