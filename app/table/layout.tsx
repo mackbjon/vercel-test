@@ -1,4 +1,5 @@
 export const runtime = 'edge'
+export const revalidate = 0
 
 export default function DashboardLayout({
   children, // will be a page or nested layout
