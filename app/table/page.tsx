@@ -5,7 +5,7 @@ import Table from '../../components/table'
 import { Suspense } from 'react'
 import TablePlaceholder from '../../components/table-placeholder'
 
-export default function TablePage() {
+export default async function TablePage() {
   return (
     <Suspense fallback={<TablePlaceholder />}>
       {/* @ts-ignore */}
